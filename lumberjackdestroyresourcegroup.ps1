@@ -1,0 +1,3 @@
+﻿
+
+Remove-AzureRmResourceGroup -ResourceGroupName LumberjackGroup
