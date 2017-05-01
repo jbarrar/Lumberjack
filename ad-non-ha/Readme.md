@@ -39,6 +39,15 @@ Launch a PowerShell console
 
 Change working folder to the folder containing this template
 
+Click the button below to deploy
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjbarrar%2Flumberjack%2Fmaster%2Fad-non-ha%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fjbarrar%2Flumberjack%2Fmaster%2Fad-non-ha%2Fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
+
 ```PowerShell
 
 # Add specific Azure Stack Environment 
@@ -72,11 +81,3 @@ New-AzurermResourceGroup -Name $resourceGroupName -Location $location
 New-AzurermResourceGroupDeployment -Name $deploymentName -ResourceGroupName $resourceGroupName `
 ��� -TemplateParameterFile .\azuredeploy.parameters.json -TemplateFile .\azuredeploy.json
 
-Click the button below to deploy
-
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjbarrar%2Flumberjack%2Fmaster%2Fad-non-ha%2Fazuredeploy.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fjbarrar%2Flumberjack%2Fmaster%2Fad-non-ha%2Fazuredeploy.json" target="_blank">
-    <img src="http://armviz.io/visualizebutton.png"/>
-</a>
