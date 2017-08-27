@@ -39,6 +39,15 @@ Launch a PowerShell console
 
 Change working folder to the folder containing this template
 
+Click the button below to deploy
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjbarrar%2Flumberjack%2Fmaster%2Fad-non-ha%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fjbarrar%2Flumberjack%2Fmaster%2Fad-non-ha%2Fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
+
 ```PowerShell
 
 # Add specific Azure Stack Environment 
@@ -46,11 +55,11 @@ Change working folder to the folder containing this template
 $AadTenantId = <Tenant Id> #GUID Specific to the AAD Tenant 
 
 Add-AzureRmEnvironment -Name 'Azure Stack' `
-    -ActiveDirectoryEndpoint ("https://login.windows.net/$AadTenantId/") `
-    -ActiveDirectoryServiceEndpointResourceId "https://azurestack.local-api/" `
-    -ResourceManagerEndpoint ("https://api.azurestack.local/") `
-    -GalleryEndpoint ("https://gallery.azurestack.local/") `
-    -GraphEndpoint "https://graph.windows.net/"
+ï¿½ï¿½ï¿½ -ActiveDirectoryEndpoint ("https://login.windows.net/$AadTenantId/") `
+ï¿½ï¿½ï¿½ -ActiveDirectoryServiceEndpointResourceId "https://azurestack.local-api/" `
+ï¿½ï¿½ï¿½ -ResourceManagerEndpoint ("https://api.azurestack.local/") `
+ï¿½ï¿½ï¿½ -GalleryEndpoint ("https://gallery.azurestack.local/") `
+ï¿½ï¿½ï¿½ -GraphEndpoint "https://graph.windows.net/"
 
 # Get Azure Stack Environment Information 
 $env = Get-AzureRmEnvironment 'Azure Stack' 
@@ -70,4 +79,5 @@ New-AzurermResourceGroup -Name $resourceGroupName -Location $location
 
 #Start new Deployment
 New-AzurermResourceGroupDeployment -Name $deploymentName -ResourceGroupName $resourceGroupName `
-    -TemplateParameterFile .\azuredeploy.parameters.json -TemplateFile .\azuredeploy.json
+ï¿½ï¿½ï¿½ -TemplateParameterFile .\azuredeploy.parameters.json -TemplateFile .\azuredeploy.json
+
