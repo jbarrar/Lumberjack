@@ -92,7 +92,7 @@
         "adDomainName": "[concat(' -adDomainName ', parameters('existingDomainName'))]",
         "gatewayName": "[concat(' -gatewayName ', parameters('gatewayName'))]"
     },
-    "scriptParameters": "[concat(variables('p').appid, variables('p').apppassword, variables('p').tenantid, variables('p').vault, variables('p').secret, variables('p').adminUsername, variables('p').adminPassword, variables('p').adDomainName)], variables('p').gatewayName)]",
+    "scriptParameters": "[concat(variables('p').appid, variables('p').apppassword, variables('p').tenantid, variables('p').vault, variables('p').secret, variables('p').adminUsername, variables('p').adminPassword, variables('p').adDomainName), variables('p').gatewayName)]",
     "scriptFolder": "Scripts",
     "scriptFileName": "Script.ps1",
     "impersonateScript": "https://gallery.technet.microsoft.com/scriptcenter/Impersonate-a-User-9bfeff82/file/127189/1/New-ImpersonateUser.ps1",
