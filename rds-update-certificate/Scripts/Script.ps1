@@ -11,6 +11,7 @@ param(
     [parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$adminPassword,
 
     [parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$adDomainName,
+	[parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$gatewayName,
 
     [Parameter(ValueFromRemainingArguments = $true)]
     $extraParameters
@@ -115,7 +116,7 @@ param(
 		$externalFqdn = $gatewayConfig.GatewayExternalFqdn
 		$externalDomainSuffix = $externalFqdn.substring($externalFqdn.IndexOf('.') + 1)
 
-		$clientAccessName = $env:COMPUTERNAME + '.' + $externalDomainSuffix
+		$clientAccessName = $gatewayName + '.' + $externalDomainSuffix
 
 		log "setting client access name to '$clientAccessName'..."
 		.\Set-RDPublishedName.ps1 -ClientAccessName $clientAccessName

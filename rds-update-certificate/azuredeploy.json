@@ -39,6 +39,13 @@
             },
             "defaultValue": "cb-vm"
         },
+        "gatewayName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of the RDWeb gateway address (login for login.contoso.com)."
+            },
+            "defaultValue": "login"
+        },
         "existingDomainName": {
             "type": "string",
             "metadata": {
@@ -82,9 +89,10 @@
         "secret": "[concat(' -secretName ', parameters('certificateName'))]",
         "adminUsername": "[concat(' -adminUsername ', parameters('existingAdminUsername'))]",
         "adminPassword": "[concat(' -adminPassword ', parameters('existingAdminPassword'))]",
-        "adDomainName": "[concat(' -adDomainName ', parameters('existingDomainName'))]"
+        "adDomainName": "[concat(' -adDomainName ', parameters('existingDomainName'))]",
+        "gatewayName": "[concat(' -gatewayName ', parameters('gatewayName'))]"
     },
-    "scriptParameters": "[concat(variables('p').appid, variables('p').apppassword, variables('p').tenantid, variables('p').vault, variables('p').secret, variables('p').adminUsername, variables('p').adminPassword, variables('p').adDomainName)]",
+    "scriptParameters": "[concat(variables('p').appid, variables('p').apppassword, variables('p').tenantid, variables('p').vault, variables('p').secret, variables('p').adminUsername, variables('p').adminPassword, variables('p').adDomainName)], variables('p').gatewayName)]",
     "scriptFolder": "Scripts",
     "scriptFileName": "Script.ps1",
     "impersonateScript": "https://gallery.technet.microsoft.com/scriptcenter/Impersonate-a-User-9bfeff82/file/127189/1/New-ImpersonateUser.ps1",

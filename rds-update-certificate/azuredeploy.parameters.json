@@ -20,6 +20,9 @@
         "brokerVmName": {
             "value": "cb-vm"
         },
+        "gatewayName": {
+            "value": "login"
+        },
         "existingDomainName": {
             "value": "mydomain.local"
         },
