@@ -46,10 +46,20 @@
       },
       "defaultValue": "Standard_A4"
     },
-    "domainToJoin": {
+    "storageType": {
       "type": "string",
+      "allowedValues": [
+        "Standard_LRS",
+        "Premium_LRS"
+      ],
       "metadata": {
-        "description": "The FQDN of the AD domain"
+        "description": "Standard or Premium storage"
+      }
+    },
+    "diskSize": {
+      "type": "int",
+      "metadata": {
+        "description": "Size of the data disk"
       }
     },
     "domainUsername": {
@@ -121,7 +131,7 @@
       "name": "[variables('storageAccountName')]",
       "location": "[resourceGroup().location]",
       "properties": {
-        "accountType": "Standard_LRS"
+        "accountType": "[parameters('storageType')]"
       }
     },
     {
@@ -190,7 +200,7 @@
               },
               "caching": "None",
               "createOption": "Empty",
-              "diskSizeGB": "1000",
+              "diskSizeGB": "[parameters('diskSize')]",
               "lun": 0
             }
           ]

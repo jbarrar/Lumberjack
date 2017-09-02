@@ -14,8 +14,11 @@
     "domainToJoin": {
       "value": "contoso.local"
     },
-    "domainUsername": {
-      "value": "azuerUser"
+    "storageType": {
+      "value": "Standard_LRS"
+    },
+    "diskSize": {
+      "value": "1000"
     },
     "domainPassword": {
       "value": "P@ssword!"
