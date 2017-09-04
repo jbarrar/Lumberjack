@@ -8,6 +8,9 @@
     "existingSubnetName": {
       "value": "subnet"
     },
+    "virtualNetworkResourceGroup": {
+      "value": "myrg"
+    },
     "vmSize": {
       "value": "Standard_A2"
     },

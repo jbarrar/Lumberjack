@@ -11,7 +11,7 @@ param(
     [parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$adminPassword,
 
     [parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$adDomainName,
-	[parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$gatewayName,
+    [parameter(mandatory = $true)][ValidateNotNullOrEmpty()] [string]$gatewayName,
 
     [Parameter(ValueFromRemainingArguments = $true)]
     $extraParameters
