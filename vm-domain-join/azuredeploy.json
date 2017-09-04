@@ -73,6 +73,12 @@
         "description": "Size of the data disk"
       }
     },
+    "domainToJoin": {
+      "type": "string",
+      "metadata": {
+        "description": "The FQDN of the AD domain"
+      }
+    },
     "domainUsername": {
       "type": "string",
       "metadata": {
